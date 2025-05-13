@@ -18,3 +18,11 @@ Realice todos los cambios necesarios en el proyecto de backend para implementar 
 1. Añadir propiedad en Restaurant y a Product
 2. Modificar Restaurant Validation en update para que tenga en 5 y -5
 3. Editar funcion update para modificar el precio (Restaurant Controller)
+
+## Frontend
+1. Añadir la propiedad y su valor por defecto en EditRestaurantScreen
+2. Añadir la propiedad al validationEschema
+3. Añadir ambos botones
+4. Añadir Modal de confirmacion copiando el de delete
+5. En EditRestaurant añadir el modal y crear un useState para que al actualizar el restaurante, este cambie
+6. Añadir textos en RestaurantScreen

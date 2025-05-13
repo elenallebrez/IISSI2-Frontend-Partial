@@ -28,3 +28,12 @@ Finalmente, el estado de cada restaurante debe ser visible -> FRONTEND
 4. Añadir nuevas restricciones, si esta cerrado no se puede usar y no poder cambiar el estado de los pedidos con valor nulo en deliveredAt (middleware)
 5. Añadr orden en index e indexOwner del RestaurantController
 6. Añadir nueva ruta
+
+## Frontend
+
+**¿Cómo se resuelve?**
+1. Añadir nueva funcion al endpoint
+2. Añadir el botón en Restaurant Screen
+3. Crear useState que cambiará cuando pinchamos en el botón
+4.  Crear la función que asociaremos al botón para actualizar el estado del restaurante.
+5.  Crear Modal
