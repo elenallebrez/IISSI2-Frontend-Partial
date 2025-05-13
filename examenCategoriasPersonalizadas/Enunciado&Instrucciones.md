@@ -12,3 +12,10 @@ No se debe permitir la creación de una categoría que ya existiera. En dicho ca
 3. Añadir restriccion del String y nueva funcion en el custom
 4. Funcion crear nueva categoria
 5. Crear ruta
+
+## Backend
+
+1. Crear endpoint
+2. Botón de navegación del restaurant Screen al Create Restaurant Category
+3. Cambiar create Restaurant
+4. Añadir Stack
