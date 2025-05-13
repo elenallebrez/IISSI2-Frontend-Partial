@@ -23,3 +23,10 @@ Además, dice que las asociaciones son:Entre Restaurant y Performance va a ser: 
 6. Hacer middleware de la performance relacionado con el ownership
 7. Añadir en index, indexOwner y show (RestaurantController)
 8. Hacer ruta
+
+## Frontend
+1. Crear el endpoint
+2. Crear el boton de performance que debe navegar a Performance Screen
+3. Añadir Stack
+4. Crear el create performance screen
+5. Añadir al restaurantDetailScreen
