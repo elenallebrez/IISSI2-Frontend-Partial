@@ -122,6 +122,7 @@ export default function CreateProductScreen ({ navigation, route }) {
                 name='order'
                 label='Order/position to be rendered:'
               />
+              {/* SOLUCION */ }
               <InputItem
                 name='visibleUntil'
                 label='Visible until:'

@@ -40,7 +40,7 @@ export default function RestaurantsScreen ({ navigation, route }) {
           <TextSemiBold>Avg. service time: <TextSemiBold textStyle={{ color: GlobalStyles.brandPrimary }}>{item.averageServiceMinutes} min.</TextSemiBold></TextSemiBold>
         }
         <TextSemiBold>Shipping: <TextSemiBold textStyle={{ color: GlobalStyles.brandPrimary }}>{item.shippingCosts.toFixed(2)}€</TextSemiBold></TextSemiBold>
-        //SOLUCION
+        {/* SOLUCION */ }
         {item.economic &&
         <TextRegular textStyle={[styles.badge, { color: GlobalStyles.brandSuccess, borderColor: GlobalStyles.brandSuccess }]}>€</TextRegular>
         }
@@ -220,6 +220,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     padding: 50
   },
+  //Solucion
   badge: {
     textAlign: 'center',
     borderWidth: 2,

@@ -24,7 +24,7 @@ export default function CreatePerformanceScreen ({ navigation, route }){
         .date()
         .required('The appointment date is required')
     })
-
+    
     const createPerformance = async (values) => {setBackendErrors([])
         try {
             const createdPerformance = await create(values)

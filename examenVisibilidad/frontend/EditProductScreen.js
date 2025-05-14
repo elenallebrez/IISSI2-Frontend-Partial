@@ -146,6 +146,7 @@ export default function EditProductScreen ({ navigation, route }) {
                 name='order'
                 label='Order/position to be rendered:'
               />
+              {/* SOLUCION */ }
               <InputItem
                 name='visibleUntil'
                 label='Visible until:'
@@ -167,6 +168,7 @@ export default function EditProductScreen ({ navigation, route }) {
               />
               <ErrorMessage name={'productCategoryId'} render={msg => <TextError>{msg}</TextError> }/>
 
+              {/* SOLUCION */ }
               <TextRegular>Is it available?</TextRegular>
               <Switch
                 trackColor={{ false: GlobalStyles.brandSecondary, true: GlobalStyles.brandPrimary }}

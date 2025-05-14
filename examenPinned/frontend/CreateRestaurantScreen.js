@@ -203,7 +203,7 @@ export default function CreateRestaurantScreen ({ navigation }) {
                 <TextRegular>Hero image: </TextRegular>
                 <Image style={styles.image} source={values.heroImage ? { uri: values.heroImage.assets[0].uri } : restaurantBackground} />
               </Pressable>
-
+              {/* SOLUCION */ }
               <TextRegular>Pin restaurant?</TextRegular>
               <Switch
               trackColor={{ false: GlobalStyles.brandSecondary, true: GlobalStyles.brandPrimary }}

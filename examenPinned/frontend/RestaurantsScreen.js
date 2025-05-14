@@ -42,6 +42,7 @@ export default function RestaurantsScreen ({ navigation, route }) {
             <TextSemiBold>Avg. service time: <TextSemiBold textStyle={{ color: GlobalStyles.brandPrimary }}>{item.averageServiceMinutes} min.</TextSemiBold></TextSemiBold>
           }
           <TextSemiBold>Shipping: <TextSemiBold textStyle={{ color: GlobalStyles.brandPrimary }}>{item.shippingCosts.toFixed(2)}€</TextSemiBold></TextSemiBold>
+          {/* SOLUCION */ }
           <Pressable
           onPress={() => { setRestaurantToBePinned(item) }}>
             <MaterialCommunityIcons
@@ -204,6 +205,7 @@ export default function RestaurantsScreen ({ navigation, route }) {
         <TextRegular>The products of this restaurant will be deleted as well</TextRegular>
         <TextRegular>If the restaurant has orders, it cannot be deleted.</TextRegular>
     </DeleteModal>
+    {/* SOLUCION */ }
     <ConfirmModal
     isVisible={restaurantToBePinned !== null}
     onCancel={() => setRestaurantToBePinned(null)}

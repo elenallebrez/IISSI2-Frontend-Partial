@@ -17,6 +17,7 @@ export default function RestaurantsScreen ({ navigation, route }) {
   const [restaurants, setRestaurants] = useState([])
   const [restaurantToBeDeleted, setRestaurantToBeDeleted] = useState(null)
   const { loggedInUser } = useContext(AuthorizationContext)
+  //Solucion
   const [restaurantToBePromoted, setRestaurantToBePromoted] = useState(null)
 
   useEffect(() => {
@@ -41,6 +42,7 @@ export default function RestaurantsScreen ({ navigation, route }) {
           <TextSemiBold>Avg. service time: <TextSemiBold textStyle={{ color: GlobalStyles.brandPrimary }}>{item.averageServiceMinutes} min.</TextSemiBold></TextSemiBold>
         }
         <TextSemiBold>Shipping: <TextSemiBold textStyle={{ color: GlobalStyles.brandPrimary }}>{item.shippingCosts.toFixed(2)}€</TextSemiBold></TextSemiBold>
+        {/* SOLUCION */ }
         {item.promoted &&
         <TextRegular textStyle={[styles.badge, { color: GlobalStyles.brandPrimary, borderColor: GlobalStyles.brandSuccess }]}>
           ¡En promoción!
@@ -177,6 +179,7 @@ export default function RestaurantsScreen ({ navigation, route }) {
     }
   }
 
+  {/* SOLUCION */ }
   const promoteRestaurant = async (restaurant) => {
     try {
       await promote(restaurant.id)
@@ -217,6 +220,7 @@ export default function RestaurantsScreen ({ navigation, route }) {
         <TextRegular>The products of this restaurant will be deleted as well</TextRegular>
         <TextRegular>If the restaurant has orders, it cannot be deleted.</TextRegular>
     </DeleteModal>
+    {/* SOLUCION */ }
     <ConfirmationModal
     isVisible={restaurantToBePromoted !== null}
     onCancel={() => setRestaurantToBePromoted(null)}
@@ -266,6 +270,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     padding: 50
   },
+  //Solucion
   badge: {
     textAlign: 'center',
     borderWidth: 2,

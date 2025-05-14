@@ -62,6 +62,7 @@ export default function RestaurantDetailScreen ({ navigation, route }) {
       >
         <TextRegular numberOfLines={2}>{item.description}</TextRegular>
         <TextSemiBold textStyle={styles.price}>{item.price.toFixed(2)}€</TextSemiBold>
+        {/* SOLUCION */ }
         {!item.availability &&
           <TextRegular textStyle={styles.availability }>Not available</TextRegular>
         }
@@ -156,6 +157,7 @@ export default function RestaurantDetailScreen ({ navigation, route }) {
     }
   }
 
+  {/* SOLUCION */ }
   const BooleanMenosDe7DiasParaDesaparecer = (date) => {
     const hoy = new Date()
     const fecha = new Date(date)
