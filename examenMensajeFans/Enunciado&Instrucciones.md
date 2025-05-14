@@ -16,3 +16,9 @@ El mensaje para los fans tendrá una longitud máxima de 500 caracteres y, obvia
 2. Añadir validacion en create y update (no hay que crear nada)
    
     check('messageToFans').optional({ nullable: true, checkFalsy: true }).isLength({ max: 500 }).isString().trim()
+
+## Frontend
+1. Añadir constante AnimatedText a Restaurant Detail
+2. Añadirlo a render Header
+3. Añadir propiedad al edit restaurant screen
+4. Añadir propiedad al create restaurant screen
