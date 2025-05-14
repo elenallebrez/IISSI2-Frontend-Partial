@@ -6,7 +6,14 @@ Recuerde que actualmente los productos se muestran en la pantalla de detalle del
 Implemente los cambios necesarios en Backend y Frontend para incluir dicha funcionalidad. 
 
 ## Backend
+
 1. Añadir nueva propiedad a Restaurant y create Restaurant
 2. Editar funcion show en Restaurant Controller para mostrar el orden por precio
 3. Crear funcion que ordena los productos para el frontend Restaurant Controller
 4. Creamos ruta
+
+## Frontend
+
+1. Añadir Endpoint
+2. Añadir la funcion al Restaurant Screen
+3. Añadir Boton
