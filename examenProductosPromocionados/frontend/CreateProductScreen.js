@@ -6,22 +6,19 @@ import InputItem from '../../components/InputItem'
 import TextRegular from '../../components/TextRegular'
 import * as GlobalStyles from '../../styles/GlobalStyles'
 import defaultProductImage from '../../../assets/product.jpeg'
+import { getProductCategories, create } from '../../api/ProductEndpoints'
 import { showMessage } from 'react-native-flash-message'
 import DropDownPicker from 'react-native-dropdown-picker'
 import * as yup from 'yup'
 import { ErrorMessage, Formik } from 'formik'
 import TextError from '../../components/TextError'
-import { getProductCategories, getDetail, update } from '../../api/ProductEndpoints'
-import { prepareEntityImages } from '../../api/helpers/FileUploadHelper'
-import { buildInitialValues } from '../Helper'
 
-export default function EditProductScreen ({ navigation, route }) {
+export default function CreateProductScreen ({ navigation, route }) {
   const [open, setOpen] = useState(false)
   const [productCategories, setProductCategories] = useState([])
   const [backendErrors, setBackendErrors] = useState()
-  const [product, setProduct] = useState({})
 
-  const [initialProductValues, setInitialProductValues] = useState({ name: null, description: null, price: null, order: null, productCategoryId: null, availability: null, image: null })
+  const initialProductValues = { name: null, description: null, price: null, order: null, restaurantId: route.params.id, productCategoryId: null, availability: true }
   const validationSchema = yup.object().shape({
     name: yup
       .string()
@@ -67,26 +64,6 @@ export default function EditProductScreen ({ navigation, route }) {
     }
     fetchProductCategories()
   }, [])
-
-  useEffect(() => {
-    async function fetchProductDetail () {
-      try {
-        const fetchedProduct = await getDetail(route.params.id)
-        const preparedProduct = prepareEntityImages(fetchedProduct, ['image'])
-        setProduct(preparedProduct)
-        const initialValues = buildInitialValues(preparedProduct, initialProductValues)
-        setInitialProductValues(initialValues)
-      } catch (error) {
-        showMessage({
-          message: `There was an error while retrieving product details (id ${route.params.id}). ${error}`,
-          type: 'error',
-          style: GlobalStyles.flashStyle,
-          titleStyle: GlobalStyles.flashTextStyle
-        })
-      }
-    }
-    fetchProductDetail()
-  }, [route])
   const pickImage = async (onSuccess) => {
     const result = await ExpoImagePicker.launchImageLibraryAsync({
       mediaTypes: ExpoImagePicker.MediaTypeOptions.Images,
@@ -101,17 +78,17 @@ export default function EditProductScreen ({ navigation, route }) {
     }
   }
 
-  const updateProduct = async (values) => {
+  const createProduct = async (values) => {
     setBackendErrors([])
     try {
-      const updatedProduct = await update(product.id, values)
+      const createdProduct = await create(values)
       showMessage({
-        message: `Product ${updatedProduct.name} succesfully updated`,
+        message: `Product ${createdProduct.name} succesfully created`,
         type: 'success',
         style: GlobalStyles.flashStyle,
         titleStyle: GlobalStyles.flashTextStyle
       })
-      navigation.navigate('RestaurantDetailScreen', { id: product.restaurantId })
+      navigation.navigate('RestaurantDetailScreen', { id: route.params.id, dirty: true })
     } catch (error) {
       console.log(error)
       setBackendErrors(error.errors)
@@ -119,10 +96,9 @@ export default function EditProductScreen ({ navigation, route }) {
   }
   return (
     <Formik
-      enableReinitialize
       validationSchema={validationSchema}
       initialValues={initialProductValues}
-      onSubmit={updateProduct}>
+      onSubmit={createProduct}>
       {({ handleSubmit, setFieldValue, values }) => (
         <ScrollView>
           <View style={{ alignItems: 'center' }}>
@@ -143,6 +119,7 @@ export default function EditProductScreen ({ navigation, route }) {
                 name='order'
                 label='Order/position to be rendered:'
               />
+              
               {/* Solucion*/}
               <TextRegular>Is it promoted?</TextRegular>
               <Switch

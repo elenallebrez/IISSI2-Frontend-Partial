@@ -18,3 +18,13 @@ Estamos trabajando sobre el modelo Product, en el cual vamos a definir una nueva
 4. Funcion promote (ver con transacciones y sin transacciones)
 5. Editar show para que aparezcan primeros los promocionados (show Restaurant Controller)
 6. Ruta
+
+## Frontend
+
+1. Añadir el endpoint
+2. Crear useState para crear el modal en Restaurant Details
+3. Añadir Boton en Restaurant Details
+4. Funcion que permite promocionar el producto
+5. Añadir Modal
+6. Crear el texto de promocionado o no promocionado
+7. Añadir en Create Product y Edit Product

@@ -143,20 +143,6 @@ export default function EditProductScreen ({ navigation, route }) {
                 name='order'
                 label='Order/position to be rendered:'
               />
-              {/* Solucion*/}
-              <TextRegular>Is it promoted?</TextRegular>
-              <Switch
-              trackColor={{ false: GlobalStyles.brandSecondary, true: GlobalStyles.brandPrimary }}
-              thumbColor={values.promoted ? GlobalStyles.brandSecondary : '#f4f3f4'}
-              // onValueChange={toggleSwitch}
-              value={values.promoted}
-              style={styles.switch}
-              onValueChange={value =>
-                setFieldValue('promoted', value)
-              }
-              />
-              <ErrorMessage name={'promoted'} render={msg =>
-              <TextError>{msg}</TextError> }/>
 
               <DropDownPicker
                 open={open}
