@@ -15,9 +15,3 @@ API_BASE_URL=http://localhost:3000.
 También debes ejecutar el servidor backend. Ve a la carpeta raíz del proyecto global y ejecuta start:backend.
 
 Luego, puedes ejecutar start:frontend. Comprueba que el proyecto base esté funcionando correctamente.
-
-## ¿Cómo puedo utilizar este repositorio?
-
-Si quieres tener tu propia copia o aportar mejoras:
-1. Haz un **fork** del repositorio.
-2. Trabaja en tus cambios.
