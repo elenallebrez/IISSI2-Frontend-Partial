@@ -9,3 +9,8 @@ Calorías producto = (grasas * 9) + (proteínas * 4) + (carbohidratos * 4)
 3. Validar check100grams
 4. Añadir a create y update
 5. Añadir al create y update de ProductController
+
+## Frontend
+
+1. Añadir propiedades en el RestaurantDetailScreen
+2. Ahora el EditProductScreen y CreateProductScreen tendremos que añadir inputs para fats, carbs y proteins.
