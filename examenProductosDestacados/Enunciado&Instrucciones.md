@@ -13,3 +13,12 @@ Además, los productos destacados aparecerán siempre al principio de los listad
 4. Crear funcion highlight para destacar o no los productos (Product Controller)
 5. Añadir nuevo orden en show (Product Controller)
 6. Crear nueva ruta
+
+## Frontend
+
+1. Crear endpoint
+2. Crear useState para el modal
+3. Crear vista que contenga el badge y la estrella
+4. Boton que destaca el producto creando un Modal
+5. Funcion que promociona el producto
+6. Crear Modal
