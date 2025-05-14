@@ -17,3 +17,9 @@ Tenemos dos nuevas propiedades,que serán:
 4. checkDiscountCodeNotRepeatedUpdate (Restaurant Validation)
 5. Volvemos a validaciones de create y update
 6. Ordenamos por descuento Restaurant Controller indexOwner
+
+## Frontend
+
+1. Añadir el nuevo render al Restaurant Screen
+2. En el Edit Restaurant se añaden las nuevas propiedades
+3. En el Create Restaurant se añaden las nuevas propiedades
