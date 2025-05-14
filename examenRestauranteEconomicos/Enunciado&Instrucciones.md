@@ -12,3 +12,7 @@ Para mayor claridad, puede observar el uso de estos operadores en una de las fot
 1. Añadir nueva propiedad (Restaurant y create Restaurant)
 2. Añadir a Product Controller una funcion que filtre por restaurantes economicos
 3. Añadir a create (Product Controller)
+
+## Frontend
+
+1. Añadir simbolo en Restaurant Screen donde badge
