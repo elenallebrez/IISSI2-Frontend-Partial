@@ -17,3 +17,9 @@ Nada mas empezar, ejecuta el test para ver que nos estan pidiendo
 1. Añadir la nueva propiedad a Products
 2. Modificar la funcion show (Restaurant Controller)
 3. Modificar ProductValidation create y update
+
+## Frontend
+
+1. Añadir propiedad a Create Product
+2. Añadir propiedad a Edit product
+3. Añadir dias que quedan en Restaurant Detail Screen
