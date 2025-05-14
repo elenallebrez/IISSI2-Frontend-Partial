@@ -32,6 +32,7 @@ export default function RestaurantDetailScreen ({ navigation, route }) {
           </View>
         </ImageBackground>
 
+        {/* SOLUCION */ }
         <AnimatedText>
         </AnimatedText>
 
@@ -155,6 +156,7 @@ export default function RestaurantDetailScreen ({ navigation, route }) {
     }
   }
 
+  //Solucion
   const AnimatedText = () => {
     const [color, setColor] = useState('blue')
     useEffect(() => {
