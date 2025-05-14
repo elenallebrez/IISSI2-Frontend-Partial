@@ -12,3 +12,14 @@ Además, los restaurantes promocionados aparecerán siempre al principio de los 
 4. Funcion de promote en Restaurant Controller
 5. Añadir nuevo orden al index e indexOwner Restaurant Controller
 6. Crear ruta
+
+## Frontend
+
+1. Añadir Endpoint
+2. Crear useState
+3. Añadir boton
+4. Añadir funcion llamando a la del endpoint
+5. Crear Confirmation Modal
+6. Crear el badge
+7. Añadir propiedad a create Restaurant Screen
+8. Añadir Switch
